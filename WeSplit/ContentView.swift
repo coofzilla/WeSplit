@@ -8,17 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    // some return something that conforms to the protocol
+    @State private var name = ""
+
     var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    Text("Goodbye, world!")
-                }
-            }
-            .navigationTitle("SwiftUI")
-            .navigationBarTitleDisplayMode(.inline)
-        }
+        TextField("Enter Name:", text: $name)
     }
 }
 
