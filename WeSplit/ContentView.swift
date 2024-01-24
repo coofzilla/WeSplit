@@ -11,7 +11,10 @@ struct ContentView: View {
     @State private var name = ""
 
     var body: some View {
-        TextField("Enter Name:", text: $name)
+        Form {
+            TextField("Enter Name:", text: $name)
+            Text("Your name is : \(name)")
+        }
     }
 }
 
